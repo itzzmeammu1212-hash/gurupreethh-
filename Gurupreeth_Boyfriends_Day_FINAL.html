@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Gurupreeth 💛</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(135deg,#fffde7,#fff59d,#ffd54f);
+  color:#3d3200;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+.page{
+  display:none;
+  width:min(90%,650px);
+  min-height:75vh;
+  padding:45px 30px;
+  border-radius:30px;
+  background:rgba(255,255,255,.72);
+  box-shadow:0 12px 40px rgba(180,140,0,.2);
+  text-align:center;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  animation:fade .45s ease;
+}
+.page.active{display:flex}
+h1{font-size:clamp(2rem,8vw,3.5rem);margin:10px 0 22px}
+h2{font-size:clamp(1.6rem,6vw,2.5rem);margin:10px 0 22px}
+p{font-size:1.12rem;line-height:1.7;max-width:560px}
+.big{font-size:1.25rem;line-height:1.8}
+button{
+  border:0;
+  border-radius:999px;
+  padding:14px 25px;
+  margin:9px;
+  background:#fbc02d;
+  color:#3d3200;
+  font-size:1rem;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 6px 15px rgba(180,140,0,.2);
+  transition:.2s;
+}
+button:hover{transform:translateY(-3px);background:#ffd740}
+.no{background:#fff3b0}
+.card{
+  width:100%;
+  max-width:530px;
+  padding:22px;
+  border-radius:22px;
+  background:#fff9c4;
+  margin:10px 0;
+  text-align:left;
+}
+.card p{margin:8px 0}
+.progress{
+  width:min(90%,400px);
+  height:18px;
+  background:#fff3b0;
+  border-radius:20px;
+  overflow:hidden;
+  margin:20px 0;
+}
+.progress span{
+  display:block;
+  width:100%;
+  height:100%;
+  background:#fbc02d;
+  animation:load 1.8s ease;
+}
+.heart{
+  position:fixed;
+  font-size:24px;
+  animation:float 2.5s linear forwards;
+  pointer-events:none;
+}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes load{from{width:0}to{width:100%}}
+@keyframes float{
+  from{transform:translateY(0) rotate(0);opacity:1}
+  to{transform:translateY(-100vh) rotate(360deg);opacity:0}
+}
+.small{font-size:.95rem;opacity:.75}
+</style>
+</head>
+<body>
+
+<section class="page active" id="p1">
+  <h1>oii gurupreethh! 💛</h1>
+  <p class="big">I made something for you!!<br>Do you wanna see it?!</p>
+  <div>
+    <button onclick="go(2)">YESSS 💛</button>
+    <button class="no" onclick="go(3)">NOO 😭</button>
+  </div>
+</section>
+
+<section class="page" id="p2">
+  <h1>HAPPY BOYFRIEND’S DAYYY! 💛</h1>
+  <p class="big">You are literally the best boyfriend that anyone could ever ask for,<br>
+  and I'm sooo lucky to have you as my boyfriend 😘😘</p>
+  <button onclick="go(4)">NEXTTT 💛</button>
+</section>
+
+<section class="page" id="p3">
+  <h2>why did you click no, huh? 😭</h2>
+  <p class="big">I spent so much time making it for you<br>
+  and you don't wanna see it?!<br>
+  Hahh you hate me 😭</p>
+  <button onclick="go(2)">OKAY FINE, I'LL SEE IT 😭</button>
+</section>
+
+<section class="page" id="p4">
+  <h2>Things that you should know 🫵🏻💛</h2>
+  <div class="card">
+    <p>You are sooo fucking cutee!!</p>
+    <p>You make me smile without even trying</p>
+    <p>I alwayss miss you more than I can admit</p>
+    <p>You are perfectt</p>
+    <p>and yes... I really, really, reallyyy love you more than you can ever imagine 🥹💛</p>
+  </div>
+  <button onclick="go(5)">NEXTTT 💛</button>
+</section>
+
+<section class="page" id="p5">
+  <h2>very serious investigation 🔎</h2>
+  <p class="big">How did Gurupreeth become my favourite person?</p>
+  <div class="progress"><span></span></div>
+  <p><b>RESULT:</b><br>It's literally just because you're you. 😭</p>
+  <button onclick="go(6)">NEXTTT 💛</button>
+</section>
+
+<section class="page" id="p6">
+  <h2>For you, Gurupreeth 💌</h2>
+  <p class="big">
+    I do not think you even realise how special you are to me.
+    You make ordinary days feel better just by being there.
+    I love all the little things about you, even the things I pretend to complain about. 😭💛
+    I am really, really lucky to have you.
+  </p>
+  <button onclick="go(7)">ONE MORE 💛</button>
+</section>
+
+<section class="page" id="p7">
+  <h1>GURUPREETHHH 🥹💛</h1>
+  <p class="big">
+    If you ever forget how much you mean to me, come back here.<br><br>
+    You're my favourite idiot, my comfort person, and one of the people who can make me smile just by existing.<br><br>
+    Happy Boyfriend's Dayyy 🤍<br>
+    Love youuu, stupid.
+  </p>
+  <button onclick="hearts()">I LOVEEEE YOUUUUUU 😭🫶🏻💛</button>
+</section>
+
+<script>
+function go(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('p'+n).classList.add('active');
+}
+function hearts(){
+  for(let i=0;i<35;i++){
+    const h=document.createElement('div');
+    h.className='heart';
+    h.textContent='💛';
+    h.style.left=Math.random()*100+'vw';
+    h.style.bottom='-30px';
+    h.style.animationDelay=(Math.random()*1.2)+'s';
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),3500);
+  }
+}
+</script>
+</body>
+</html>
